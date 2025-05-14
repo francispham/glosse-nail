@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   images: {
     // Known domain for project assets - ignore spell check warning
-    domains: ["res.cloudinary.com"],
+    domains: ["res.cloudinary.com", "html.tailus.io", "ik.imagekit.io"],
   },
 };
 

@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+
 import { Button } from "@/components/ui/button";
 import { HeroHeader } from "@/components/hero9-header";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
-import { ChevronRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -12,26 +13,21 @@ export default function HeroSection() {
       <HeroHeader />
       <main className="overflow-x-hidden">
         <section>
-          <div className="py-24 md:pb-32 lg:pb-36 lg:pt-72">
-            <div className="relative mx-auto flex max-w-7xl flex-col px-6 lg:block lg:px-12">
-              <div className="mx-auto max-w-lg text-center lg:ml-0 lg:max-w-full lg:text-left">
-                <h1 className="mt-8 max-w-2xl text-balance text-5xl md:text-6xl lg:mt-16 xl:text-7xl">
-                  Build 10x Faster with NS
+          <div className="pb-24 pt-12 md:pb-32 lg:pb-56 lg:pt-44">
+            <div className="relative mx-auto flex max-w-6xl flex-col px-6 lg:block">
+              <div className="mx-auto max-w-lg text-center lg:ml-0 lg:w-1/2 lg:text-left">
+                <h1 className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16 xl:text-7xl">
+                  Ship 10x Faster with NS
                 </h1>
-                <p className="mt-8 max-w-2xl text-balance text-lg">
+                <p className="mt-8 max-w-2xl text-pretty text-lg">
                   Highly customizable components for building modern websites
-                  and applications you mean it.
+                  and applications that look and feel the way you mean it.
                 </p>
 
                 <div className="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="h-12 rounded-full pl-5 pr-3 text-base"
-                  >
+                  <Button asChild size="lg" className="px-5 text-base">
                     <Link href="#link">
                       <span className="text-nowrap">Start Building</span>
-                      <ChevronRight className="ml-1" />
                     </Link>
                   </Button>
                   <Button
@@ -39,7 +35,7 @@ export default function HeroSection() {
                     asChild
                     size="lg"
                     variant="ghost"
-                    className="h-12 rounded-full px-5 text-base hover:bg-zinc-950/5 dark:hover:bg-white/5"
+                    className="px-5 text-base"
                   >
                     <Link href="#link">
                       <span className="text-nowrap">Request a demo</span>
@@ -47,17 +43,18 @@ export default function HeroSection() {
                   </Button>
                 </div>
               </div>
-            </div>
-            <div className="aspect-2/3 absolute inset-1 -z-10 overflow-hidden rounded-3xl border border-black/10 lg:aspect-video lg:rounded-[3rem] dark:border-white/5">
-              <video
-                autoPlay
-                loop
-                className="size-full -scale-x-100 object-cover opacity-50 invert dark:opacity-35 dark:invert-0 dark:lg:opacity-75"
-                src="https://res.cloudinary.com/dg4jhba5c/video/upload/v1741605033/dna_ttplyu.mp4"
-              ></video>
+              <Image
+                className="-z-10 order-first ml-auto h-56 w-full object-cover invert sm:h-96 lg:absolute lg:inset-0 lg:-right-20 lg:-top-96 lg:order-last lg:h-max lg:w-2/3 lg:object-contain dark:mix-blend-lighten dark:invert-0"
+                src="https://ik.imagekit.io/lrigu76hy/tailark/abstract-bg.jpg?updatedAt=1745733473768"
+                alt="Abstract Object"
+                height="4000"
+                width="3000"
+                priority
+              />
             </div>
           </div>
         </section>
+
         <section className="bg-background pb-2">
           <div className="group relative m-auto max-w-7xl px-6">
             <div className="flex flex-col items-center md:flex-row">
