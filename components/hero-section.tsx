@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
-import { HeroHeader } from "@/components/hero9-header";
+import { HeroHeader } from "@/components/hero-header";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
