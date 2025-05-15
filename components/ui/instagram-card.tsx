@@ -15,7 +15,11 @@ export default function InstagramCard({ url }: { url: string }) {
 
   return (
     <Card suppressHydrationWarning className="group border-0 shadow-none">
-      <InstagramEmbed url={url} width={328} />
+      <InstagramEmbed
+        url={url}
+        style={{ maxWidth: 550, minWidth: 328 }}
+        width="100%"
+      />
     </Card>
   );
 }

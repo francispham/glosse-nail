@@ -13,7 +13,7 @@ export default function InstagramSection() {
             repellendus.
           </p>
         </div>
-        <div className="@min-4xl:max-w-full @min-4xl:grid-cols-3 mx-auto mt-8 grid max-w-sm gap-6 [--color-background:var(--color-muted)] [--color-card:var(--color-muted)] *:text-center md:mt-16 dark:[--color-muted:var(--color-zinc-900)]">
+        <div className="@min-4xl:max-w-full @min-4xl:grid-cols-3 mx-auto mt-8 grid max-w-sm gap-20 *:text-center md:mt-16">
           <InstagramCard url="https://www.instagram.com/p/DJaGMLkBg5H/" />
           <InstagramCard url="https://www.instagram.com/p/Cco5p1rrArQ/" />
           <InstagramCard url="https://www.instagram.com/p/DGT5f_WSne8" />
