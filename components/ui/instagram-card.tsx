@@ -14,7 +14,10 @@ export default function InstagramCard({ url }: { url: string }) {
     return <div className="h-64 w-full animate-pulse rounded-lg bg-muted" />;
 
   return (
-    <Card suppressHydrationWarning className="group border-0 shadow-none">
+    <Card
+      suppressHydrationWarning
+      className="group border-0 shadow-none items-center py-0"
+    >
       <InstagramEmbed
         url={url}
         style={{ maxWidth: 550, minWidth: 328 }}
