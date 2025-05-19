@@ -4,23 +4,19 @@ export const LINKS = [
     href: "#features",
   },
   {
-    title: "Solution",
-    href: "#",
+    title: "Team",
+    href: "#team",
   },
   {
-    title: "Customers",
-    href: "#",
+    title: "Testimonials",
+    href: "#testimonials",
   },
   {
     title: "Pricing",
-    href: "#",
-  },
-  {
-    title: "Help",
-    href: "#",
+    href: "#pricing",
   },
   {
     title: "About",
-    href: "#",
+    href: "#about",
   },
 ] as const;

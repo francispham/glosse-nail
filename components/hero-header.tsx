@@ -3,17 +3,20 @@ import Link from "next/link";
 import { Logo } from "./logo";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import React from "react";
+import { useState, useEffect } from "react";
 import { useScroll, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { LINKS } from "@/lib/constants";
+import { useScrollToElement } from "@/lib/hooks";
 
 export const HeroHeader = () => {
-  const [menuState, setMenuState] = React.useState(false);
-  const [scrolled, setScrolled] = React.useState(false);
-  const { scrollYProgress } = useScroll();
+  const [menuState, setMenuState] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  React.useEffect(() => {
+  const { scrollYProgress } = useScroll();
+  const handleScroll = useScrollToElement();
+
+  useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
       setScrolled(latest > 0.05);
     });
@@ -62,8 +65,9 @@ export const HeroHeader = () => {
                   {LINKS.map((item, index) => (
                     <li key={index}>
                       <Link
-                        href={item.href}
                         className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                        href={item.href}
+                        onClick={(e) => handleScroll(e, item)}
                       >
                         <span>{item.title}</span>
                       </Link>
@@ -79,8 +83,9 @@ export const HeroHeader = () => {
                   {LINKS.map((item, index) => (
                     <li key={index}>
                       <Link
-                        href={item.href}
                         className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                        href={item.href}
+                        onClick={(e) => handleScroll(e, item)}
                       >
                         <span>{item.title}</span>
                       </Link>

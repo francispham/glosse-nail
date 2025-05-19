@@ -8,7 +8,7 @@ export const INSTAGRAM_POSTS = [
 
 export default function InstagramSection() {
   return (
-    <section className="py-16 md:py-32">
+    <section className="py-16 md:py-32" id="features">
       <div className="@container mx-auto max-w-5xl px-6">
         <div className="text-center">
           <h2 className="text-balance text-4xl font-semibold lg:text-5xl">
@@ -19,7 +19,7 @@ export default function InstagramSection() {
             repellendus.
           </p>
         </div>
-        <div className="@min-4xl:gap-20 @min-4xl:grid-cols-3 max-w-full mx-auto mt-8 grid *:text-center md:mt-16">
+        <div className="grid gap-12 mx-auto mt-8 sm:grid-cols-2 lg:grid-cols-3  [--color-background:var(--color-muted)] [--color-card:var(--color-muted)] *:text-center md:mt-16 dark:[--color-muted:var(--color-zinc-900)]">
           {INSTAGRAM_POSTS.map((post) => (
             <InstagramCard key={post.id} url={post.url} />
           ))}
