@@ -3,23 +3,20 @@ import Link from "next/link";
 import { Logo } from "./logo";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import React from "react";
+import { useState, useEffect } from "react";
 import { useScroll, motion } from "motion/react";
 import { cn } from "@/lib/utils";
-
-const menuItems = [
-  { name: "Features", href: "#link" },
-  { name: "Solution", href: "#link" },
-  { name: "Pricing", href: "#link" },
-  { name: "About", href: "#link" },
-];
+import { LINKS } from "@/lib/constants";
+import { useScrollToElement } from "@/lib/hooks";
 
 export const HeroHeader = () => {
-  const [menuState, setMenuState] = React.useState(false);
-  const [scrolled, setScrolled] = React.useState(false);
-  const { scrollYProgress } = useScroll();
+  const [menuState, setMenuState] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  React.useEffect(() => {
+  const { scrollYProgress } = useScroll();
+  const handleScroll = useScrollToElement();
+
+  useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
       setScrolled(latest > 0.05);
     });
@@ -65,13 +62,14 @@ export const HeroHeader = () => {
 
               <div className="hidden lg:block">
                 <ul className="flex gap-8 text-sm">
-                  {menuItems.map((item, index) => (
+                  {LINKS.map((item, index) => (
                     <li key={index}>
                       <Link
-                        href={item.href}
                         className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                        href={item.href}
+                        onClick={(e) => handleScroll(e, item)}
                       >
-                        <span>{item.name}</span>
+                        <span>{item.title}</span>
                       </Link>
                     </li>
                   ))}
@@ -82,13 +80,14 @@ export const HeroHeader = () => {
             <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
               <div className="lg:hidden">
                 <ul className="space-y-6 text-base">
-                  {menuItems.map((item, index) => (
+                  {LINKS.map((item, index) => (
                     <li key={index}>
                       <Link
-                        href={item.href}
                         className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                        href={item.href}
+                        onClick={(e) => handleScroll(e, item)}
                       >
-                        <span>{item.name}</span>
+                        <span>{item.title}</span>
                       </Link>
                     </li>
                   ))}

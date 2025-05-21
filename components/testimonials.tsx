@@ -8,7 +8,7 @@ type Testimonial = {
   quote: string;
 };
 
-const testimonials: Testimonial[] = [
+const TESTIMONIALS: Testimonial[] = [
   {
     name: "Jonathan Yombo",
     role: "Software Engineer",
@@ -93,7 +93,7 @@ const testimonials: Testimonial[] = [
     quote:
       "Tailus is so well designed that even with a very poor knowledge of web design you can do miracles. Let yourself be seduced!",
   },
-];
+] as const;
 
 const chunkArray = (
   array: Testimonial[],
@@ -107,13 +107,13 @@ const chunkArray = (
 };
 
 const testimonialChunks = chunkArray(
-  testimonials,
-  Math.ceil(testimonials.length / 3)
+  TESTIMONIALS,
+  Math.ceil(TESTIMONIALS.length / 3)
 );
 
 export default function WallOfLoveSection() {
   return (
-    <section>
+    <section id="testimonials">
       <div className="py-16 md:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="text-center">

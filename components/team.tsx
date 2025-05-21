@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const members = [
+const MEMBERS = [
   {
     name: "Liam Brown",
     role: "Founder - CEO",
@@ -44,11 +44,11 @@ const members = [
       "https://res.cloudinary.com/ddz8cmo2p/image/upload/v1629425837/n5neqe4j7q8njzvf0tne.jpg",
     link: "#",
   },
-];
+] as const;
 
 export default function TeamSection() {
   return (
-    <section className="bg-gray-50 py-16 md:py-32 dark:bg-transparent">
+    <section className="bg-gray-50 py-16 md:py-32 dark:bg-transparent" id="team">
       <div className="mx-auto max-w-5xl border-t px-6">
         <span className="text-caption -ml-6 -mt-3.5 block w-max bg-gray-50 px-6 dark:bg-gray-950">
           Team
@@ -67,7 +67,7 @@ export default function TeamSection() {
         </div>
         <div className="mt-12 md:mt-24">
           <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-            {members.map((member, index) => (
+            {MEMBERS.map((member, index) => (
               <div key={index} className="group overflow-hidden">
                 <Image
                   className="h-96 w-full rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:h-[22.5rem] group-hover:rounded-xl"
