@@ -4,6 +4,9 @@ export const INSTAGRAM_POSTS = [
   { id: 1, url: "https://www.instagram.com/p/DJaGMLkBg5H/" },
   { id: 2, url: "https://www.instagram.com/p/Cco5p1rrArQ/" },
   { id: 3, url: "https://www.instagram.com/p/DGT5f_WSne8" },
+  { id: 4, url: "https://www.instagram.com/p/DIsnYpgOF9l/" },
+  { id: 5, url: "https://www.instagram.com/p/DIF2Mvfxos0/" },
+  { id: 6, url: "https://www.instagram.com/p/DILBz1LOhEh/" },
 ] as const;
 
 export default function Features() {
