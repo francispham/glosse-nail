@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -6,8 +6,12 @@ import { Button } from "@/components/ui/button";
 import { HeroHeader } from "@/components/header";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
+import { useScrollToElement } from "@/lib/hooks";
+import { LINKS } from "@/lib/constants";
 
 export default function HeroSection() {
+  const handleScroll = useScrollToElement();
+
   return (
     <>
       <HeroHeader />
@@ -17,17 +21,20 @@ export default function HeroSection() {
             <div className="relative mx-auto flex max-w-6xl flex-col px-6 lg:block">
               <div className="mx-auto max-w-lg text-center lg:ml-0 lg:w-1/2 lg:text-left">
                 <h1 className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16 xl:text-7xl">
-                  Ship 10x Faster with NS
+                  Glosse Nails
                 </h1>
                 <p className="mt-8 max-w-2xl text-pretty text-lg">
-                  Highly customizable components for building modern websites
-                  and applications that look and feel the way you mean it.
+                  We are a team of passionate nail technicians who are dedicated
+                  to providing the highest quality of service to our clients.
                 </p>
 
                 <div className="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start">
                   <Button asChild size="lg" className="px-5 text-base">
-                    <Link href="#link">
-                      <span className="text-nowrap">Start Building</span>
+                    <Link
+                      href="#features"
+                      onClick={(e) => handleScroll(e, LINKS[0])}
+                    >
+                      <span className="text-nowrap">Book an appointment</span>
                     </Link>
                   </Button>
                   <Button
@@ -37,8 +44,11 @@ export default function HeroSection() {
                     variant="ghost"
                     className="px-5 text-base"
                   >
-                    <Link href="#link">
-                      <span className="text-nowrap">Request a demo</span>
+                    <Link
+                      href="#contact"
+                      onClick={(e) => handleScroll(e, LINKS[4])}
+                    >
+                      <span className="text-nowrap">Contact us</span>
                     </Link>
                   </Button>
                 </div>
@@ -72,7 +82,6 @@ export default function HeroSection() {
                       width="auto"
                     />
                   </div>
-
                   <div className="flex">
                     <img
                       className="mx-auto h-4 w-fit dark:invert"
@@ -127,7 +136,6 @@ export default function HeroSection() {
                       width="auto"
                     />
                   </div>
-
                   <div className="flex">
                     <img
                       className="mx-auto h-6 w-fit dark:invert"

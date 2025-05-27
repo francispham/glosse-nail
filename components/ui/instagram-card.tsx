@@ -20,7 +20,11 @@ export default function InstagramCard({ url }: { url: string }) {
     >
       <InstagramEmbed
         url={url}
-        style={{ maxWidth: 550, minWidth: 328 }}
+        style={{
+          maxWidth: 550,
+          minWidth: 328,
+          backgroundColor: `var(--color-gray-50)`,
+        }}
         width="100%"
       />
     </Card>

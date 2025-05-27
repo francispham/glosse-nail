@@ -11,15 +11,17 @@ export const INSTAGRAM_POSTS = [
 
 export default function Features() {
   return (
-    <section className="py-16 md:py-32" id="features">
+    <section
+      className="bg-gray-50 py-16 md:py-32 dark:bg-transparent"
+      id="features"
+    >
       <div className="@container mx-auto max-w-5xl px-6">
         <div className="text-center">
           <h2 className="text-balance text-4xl font-semibold lg:text-5xl">
-            Built to cover your needs
+            Instagram
           </h2>
           <p className="mt-4">
-            Libero sapiente aliquam quibusdam aspernatur, praesentium iusto
-            repellendus.
+            Follow us on Instagram for the latest updates and photos.
           </p>
         </div>
         <div className="grid gap-12 mx-auto mt-8 sm:grid-cols-2 lg:grid-cols-3  [--color-background:var(--color-muted)] [--color-card:var(--color-muted)] *:text-center md:mt-16 dark:[--color-muted:var(--color-zinc-900)]">

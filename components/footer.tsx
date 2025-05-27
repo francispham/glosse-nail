@@ -1,10 +1,14 @@
+"use client";
 import Link from "next/link";
 
 import { Logo } from "@/components/logo";
-import { LINKS } from "@/lib/constants";
 import { InstagramLink } from "@/components/ui/instagram-link";
+import { LINKS } from "@/lib/constants";
+import { useScrollToElement } from "@/lib/hooks";
 
 export default function FooterSection() {
+  const handleScroll = useScrollToElement();
+
   return (
     <footer className="py-16 md:py-32">
       <div className="mx-auto max-w-5xl px-6">
@@ -17,6 +21,7 @@ export default function FooterSection() {
             <Link
               key={index}
               href={link.href}
+              onClick={(e) => handleScroll(e, link)}
               className="text-muted-foreground hover:text-primary block duration-150"
             >
               <span>{link.title}</span>

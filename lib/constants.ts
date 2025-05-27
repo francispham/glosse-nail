@@ -4,6 +4,10 @@ export const LINKS = [
     href: "#features",
   },
   {
+    title: "Pricing",
+    href: "#pricing",
+  },
+  {
     title: "Booking",
     href: "#team",
   },
@@ -12,11 +16,7 @@ export const LINKS = [
     href: "#testimonials",
   },
   {
-    title: "Pricing",
-    href: "#pricing",
-  },
-  {
-    title: "About",
-    href: "#about",
+    title: "Contact",
+    href: "#contact",
   },
 ] as const;
