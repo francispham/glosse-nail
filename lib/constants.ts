@@ -4,16 +4,16 @@ export const LINKS = [
     href: "#features",
   },
   {
+    title: "Pricing",
+    href: "#pricing",
+  },
+  {
     title: "Booking",
     href: "#team",
   },
   {
     title: "Testimonials",
     href: "#testimonials",
-  },
-  {
-    title: "Pricing",
-    href: "#pricing",
   },
   {
     title: "Contact",

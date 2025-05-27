@@ -12,9 +12,9 @@ export default function Home() {
     <>
       <HeroSection />
       <FeaturesSection />
+      <PricingSection />
       <TeamSection />
       <TestimonialsSection />
-      <PricingSection />
       <ContactSection />
       <Footer />
       <SplashCursor />
