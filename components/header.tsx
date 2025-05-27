@@ -13,7 +13,6 @@ import { InstagramLink } from "@/components/ui/instagram-link";
 export const HeroHeader = () => {
   const [menuState, setMenuState] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
   const { scrollYProgress } = useScroll();
 
   useEffect(() => {
@@ -70,7 +69,7 @@ export const HeroHeader = () => {
             <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
               <div className="lg:hidden">
                 <ul className="space-y-6 text-base">
-                  <LinkList />
+                  <LinkList setMenuState={setMenuState} />
                 </ul>
               </div>
               <AuthButtons />
@@ -98,7 +97,11 @@ const AuthButtons = ({ show = false }: { show?: boolean }) =>
     </div>
   ) : null;
 
-const LinkList = () => {
+const LinkList = ({
+  setMenuState,
+}: {
+  setMenuState?: (state: boolean) => void;
+}) => {
   const handleScroll = useScrollToElement();
 
   return (
@@ -108,7 +111,10 @@ const LinkList = () => {
           <Link
             className="text-muted-foreground hover:text-accent-foreground block duration-150"
             href={item.href}
-            onClick={(e) => handleScroll(e, item)}
+            onClick={(e) => {
+              handleScroll(e, item);
+              setMenuState?.(false);
+            }}
           >
             <span>{item.title}</span>
           </Link>
