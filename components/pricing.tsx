@@ -6,8 +6,10 @@ const PricingSection = () => {
     <section id="pricing" className="py-24 bg-white">
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Our Services & Pricing</h2>
-          <p className="text-xl text-gray-600">
+          <h2 className="text-balance text-4xl font-semibold lg:text-5xl">
+            Our Services & Pricing
+          </h2>
+          <p className="mt-4 text-gray-600">
             Quality nail services at competitive prices
           </p>
         </div>
