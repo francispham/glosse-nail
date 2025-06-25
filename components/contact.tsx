@@ -4,9 +4,11 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-24 bg-gray-50">
       <div className="container px-4 mx-auto">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Contact Us</h2>
-          <p className="text-xl text-gray-600">
+        <div className="max-w-3xl mx-auto text-center mb-8">
+          <h2 className="text-balance text-4xl font-semibold lg:text-5xl">
+            Contact Us
+          </h2>
+          <p className="mt-4 text-gray-600">
             We&apos;d love to hear from you. Get in touch with us!
           </p>
         </div>

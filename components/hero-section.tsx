@@ -32,7 +32,7 @@ export default function HeroSection() {
                   <Button asChild size="lg" className="px-5 text-base">
                     <Link
                       href="#features"
-                      onClick={(e) => handleScroll(e, LINKS[0])}
+                      onClick={(e) => handleScroll(e, LINKS[2])}
                     >
                       <span className="text-nowrap">Book an appointment</span>
                     </Link>
