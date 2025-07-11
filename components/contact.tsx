@@ -123,12 +123,19 @@ const ContactSection = () => {
                     />
                   </svg>
                 </div>
-                <div className="ml-4">
+                <div className="ml-4 max-w-2xl w-full">
                   <h4 className="text-lg font-medium">Opening Hours</h4>
-                  <p className="mt-1 text-gray-400">
-                    Monday - Saturday: 10:00 AM - 8:00 PM
+                  <p className="flex justify-between mt-1 text-gray-400">
+                    <span>Monday - Wednesday & Saturday:</span>
+                    <span>10:00 AM - 7:00 PM</span>
                   </p>
-                  <p className="text-gray-400">Sunday: 11:00 AM - 6:00 PM</p>
+                  <p className="flex justify-between mt-1 text-gray-400">
+                    <span>Thursday - Friday:</span>
+                    <span>10:00 AM - 8:00 PM</span>
+                  </p>
+                  <p className="flex justify-between mt-1 text-gray-400">
+                    <span>Sunday:</span> <span>10:00 AM - 6:00 PM</span>
+                  </p>
                 </div>
               </div>
             </div>
