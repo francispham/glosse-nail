@@ -3,55 +3,31 @@ import Image from "next/image";
 
 const MEMBERS = [
   {
-    name: "Liam Brown",
-    role: "Founder - CEO",
+    name: "Kate Tran",
+    role: "Nail Artist",
     avatar:
       "https://res.cloudinary.com/ddz8cmo2p/image/upload/v1629562411/mbmxsowwkwkre26cy2ez.png",
     link: "#",
   },
   {
-    name: "Elijah Jones",
-    role: "Co-Founder - CTO",
+    name: "Tracy Tran",
+    role: "Nail Artist",
     avatar:
       "https://res.cloudinary.com/ddz8cmo2p/image/upload/v1629503635/h1sbkzcehid1aqyz3axk.png",
     link: "#",
   },
   {
     name: "Isabella Garcia",
-    role: "Sales Manager",
+    role: "Nail Artist",
     avatar:
       "https://res.cloudinary.com/ddz8cmo2p/image/upload/v1629426138/lal52cozofe7iqoi4h4h.jpg",
-    link: "#",
-  },
-  {
-    name: "Henry Lee",
-    role: "UX Engineer",
-    avatar:
-      "https://res.cloudinary.com/ddz8cmo2p/image/upload/v1625253722/ecommerce/60df67594d698abec41fd77c.jpg",
-    link: "#",
-  },
-  {
-    name: "Ava Williams",
-    role: "Interaction Designer",
-    avatar:
-      "https://res.cloudinary.com/ddz8cmo2p/image/upload/v1629425460/e28bytoz4r8ijktbp9v6.jpg",
-    link: "#",
-  },
-  {
-    name: "Olivia Miller",
-    role: "Visual Designer",
-    avatar:
-      "https://res.cloudinary.com/ddz8cmo2p/image/upload/v1629425837/n5neqe4j7q8njzvf0tne.jpg",
     link: "#",
   },
 ] as const;
 
 export default function TeamSection() {
   return (
-    <section
-      className="bg-gray-50 py-16 md:py-32 dark:bg-transparent"
-      id="team"
-    >
+    <section className="bg-card py-16 md:py-32" id="team">
       <div className="mx-auto max-w-5xl border-t px-6">
         <span className="text-caption -ml-6 -mt-3.5 block w-max bg-gray-50 px-6 dark:bg-gray-950">
           Team

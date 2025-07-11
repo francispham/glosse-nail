@@ -3,13 +3,13 @@ import { Card } from "@/components/ui/card";
 
 const PricingSection = () => {
   return (
-    <section id="pricing" className="py-24 bg-white">
+    <section id="pricing" className="py-24 bg-card">
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-balance text-4xl font-semibold lg:text-5xl">
             Our Services & Pricing
           </h2>
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-400">
             Quality nail services at competitive prices with 10 days guarantee
             on all services
           </p>
@@ -39,7 +39,7 @@ const PricingSection = () => {
                 <span>Shellac/Gel Manicure & Pedicure</span>
                 <span className="font-semibold">$81</span>
               </li>
-              <li className="text-sm text-gray-600">
+              <li className="text-sm text-gray-400">
                 **Note: Additional $5 for gel removal
               </li>
             </ul>
@@ -95,7 +95,7 @@ const PricingSection = () => {
                 <span className="font-semibold">+$15</span>
               </li>
 
-              <li className="text-sm text-gray-600 ml-4">
+              <li className="text-sm text-gray-400 ml-4">
                 <span>Includes a soak off removal + Nails Strengthening</span>
               </li>
 
@@ -136,7 +136,7 @@ const PricingSection = () => {
                 <span>Regular Manicure</span>
                 <span className="font-semibold">$11</span>
               </li>
-              <li className="text-sm text-gray-600 ml-8">
+              <li className="text-sm text-gray-400 ml-8">
                 with Shellac/Gel +$10
               </li>
 
@@ -144,7 +144,7 @@ const PricingSection = () => {
                 <span>Regular Pedicure</span>
                 <span className="font-semibold">$21</span>
               </li>
-              <li className="text-sm text-gray-600 ml-8">
+              <li className="text-sm text-gray-400 ml-8">
                 with Shellac/Gel +$10
               </li>
 
@@ -273,11 +273,11 @@ const PricingSection = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-gray-600">
+          <p className="text-gray-400">
             Prices may vary based on nail length, design complexity, and
             additional services.
           </p>
-          <p className="text-gray-600 mt-2">
+          <p className="text-gray-400 mt-2">
             Please call for more information or to book an appointment.
           </p>
         </div>

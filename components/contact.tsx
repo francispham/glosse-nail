@@ -2,19 +2,19 @@ import React from "react";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-24 bg-gray-50">
+    <section id="contact" className="py-24 bg-card">
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-8">
           <h2 className="text-balance text-4xl font-semibold lg:text-5xl">
             Contact Us
           </h2>
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-400">
             We&apos;d love to hear from you. Get in touch with us!
           </p>
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="bg-white p-12 rounded-lg shadow-md">
+          <div className="bg-card p-12 rounded-lg shadow-md border">
             <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
 
             <div className="space-y-6">
@@ -46,7 +46,7 @@ const ContactSection = () => {
                     href="https://www.google.com/maps/place/Sassy+Nails+Spa+and+Hair/@49.2815403,-123.133234,17z/data=!3m1!4b1!4m6!3m5!1s0x5486722b7ba5cb6b:0x72f73e8d532b32ea!8m2!3d49.2815403!4d-123.133234!16s%2Fg%2F1td1pkrl?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 text-gray-600 hover:text-primary transition-colors"
+                    className="mt-1 text-gray-400 hover:text-primary transition-colors"
                   >
                     1196 Davie St, Vancouver, BC V6E 1N1
                   </a>
@@ -72,10 +72,10 @@ const ContactSection = () => {
                 <div className="ml-4">
                   <h4 className="text-lg font-medium">Phone</h4>
                   <a
-                    href="tel:+16046814612"
-                    className="mt-1 text-gray-600 hover:text-primary transition-colors"
+                    href="tel:+17789696688"
+                    className="mt-1 text-gray-400 hover:text-primary transition-colors"
                   >
-                    (604) 681-4612
+                    (778) 969-6688
                   </a>
                 </div>
               </div>
@@ -100,7 +100,7 @@ const ContactSection = () => {
                   <h4 className="text-lg font-medium">Email</h4>
                   <a
                     href="mailto:info@glossenails.ca"
-                    className="mt-1 text-gray-600 hover:text-primary transition-colors"
+                    className="mt-1 text-gray-400 hover:text-primary transition-colors"
                   >
                     info@glossenails.ca
                   </a>
@@ -125,10 +125,10 @@ const ContactSection = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-medium">Opening Hours</h4>
-                  <p className="mt-1 text-gray-600">
+                  <p className="mt-1 text-gray-400">
                     Monday - Saturday: 10:00 AM - 8:00 PM
                   </p>
-                  <p className="text-gray-600">Sunday: 11:00 AM - 6:00 PM</p>
+                  <p className="text-gray-400">Sunday: 11:00 AM - 6:00 PM</p>
                 </div>
               </div>
             </div>

@@ -20,7 +20,7 @@ export default function Features() {
           <h2 className="text-balance text-4xl font-semibold lg:text-5xl">
             Instagram
           </h2>
-          <p className="mt-4">
+          <p className="mt-4 text-gray-400">
             Follow us on Instagram for the latest updates and photos.
           </p>
         </div>

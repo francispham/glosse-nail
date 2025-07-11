@@ -1,13 +1,14 @@
 "use client";
 import Link from "next/link";
-import { Logo } from "./logo";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { useScroll, motion } from "motion/react";
+
 import { cn } from "@/lib/utils";
 import { LINKS } from "@/lib/constants";
 import { useScrollToElement } from "@/lib/hooks";
+import { Button } from "@/components/ui/button";
 import { InstagramLink } from "@/components/ui/instagram-link";
 
 export const HeroHeader = () => {
@@ -47,7 +48,13 @@ export const HeroHeader = () => {
                 aria-label="home"
                 className="flex items-center space-x-2"
               >
-                <Logo />
+                <Image
+                  src="https://res.cloudinary.com/ddz8cmo2p/image/upload/v1750741597/Glosse_nails_2_uxujwu.png"
+                  alt="Glosse Nails Logo"
+                  width={100}
+                  height={50}
+                  className="h-6 w-auto lg:h-8"
+                />
               </Link>
 
               <button

@@ -21,11 +21,12 @@ export default function InstagramCard({ url }: { url: string }) {
       <InstagramEmbed
         url={url}
         style={{
-          maxWidth: 550,
+          maxWidth: 528,
           minWidth: 328,
-          backgroundColor: `var(--color-gray-50)`,
+          maxHeight: 533,
+          backgroundColor: `var(--primary-foreground) !important`,
         }}
-        width="100%"
+        placeholderDisabled
       />
     </Card>
   );
