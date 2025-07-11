@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 
-import { Logo } from "@/components/logo";
 import { InstagramLink } from "@/components/ui/instagram-link";
 import { LINKS } from "@/lib/constants";
 import { useScrollToElement } from "@/lib/hooks";
@@ -13,7 +13,13 @@ export default function FooterSection() {
     <footer className="py-16 md:py-32">
       <div className="mx-auto max-w-5xl px-6">
         <Link href="/" aria-label="go home" className="mx-auto block size-fit">
-          <Logo />
+          <Image
+            src="https://res.cloudinary.com/ddz8cmo2p/image/upload/v1750741597/Logo_nmcxy6.png"
+            alt="Glosse Nails Logo"
+            width={200}
+            height={50}
+            className="mt-4"
+          />
         </Link>
 
         <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
