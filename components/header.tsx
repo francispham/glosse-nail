@@ -53,7 +53,7 @@ export const HeroHeader = () => {
                   alt="Glosse Nails Logo"
                   width={100}
                   height={50}
-                  className="h-6 w-auto lg:h-8"
+                  className="h-9 w-auto lg:h-13"
                 />
               </Link>
 
