@@ -149,9 +149,9 @@ const POLICIES = [
   "For any inquiries, kindly contact the salon by phone or email for prompt assistance.",
 ];
 
-const PricingSection = () => {
+const ServicesSection = () => {
   return (
-    <section id="pricing" className="py-24 bg-card">
+    <section id="services" className="py-24 bg-card">
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-balance text-4xl font-semibold lg:text-5xl">
@@ -317,4 +317,4 @@ const PricingSection = () => {
   );
 };
 
-export default PricingSection;
+export default ServicesSection;
