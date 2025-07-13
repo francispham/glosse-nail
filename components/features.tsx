@@ -11,10 +11,7 @@ export const INSTAGRAM_POSTS = [
 
 export default function Features() {
   return (
-    <section
-      className="bg-gray-50 py-16 md:py-32 dark:bg-transparent"
-      id="features"
-    >
+    <section className="bg-card py-16 md:py-32" id="features">
       <div className="@container mx-auto max-w-5xl px-6">
         <div className="text-center">
           <h2 className="text-balance text-4xl font-semibold lg:text-5xl">

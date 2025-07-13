@@ -1,7 +1,7 @@
-import HeroSection from "@/components/hero-section";
+import HeroSection from "@/components/about";
 import TeamSection from "@/components/team";
 import FeaturesSection from "@/components/features";
-import TestimonialsSection from "@/components/testimonials";
+// import TestimonialsSection from "@/components/testimonials";
 import ServicesSection from "@/components/services";
 import ContactSection from "@/components/contact";
 import Footer from "@/components/footer";
@@ -11,10 +11,10 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <ServicesSection />
       <FeaturesSection />
       <TeamSection />
-      <TestimonialsSection />
+      <ServicesSection />
+      {/* <TestimonialsSection /> */}
       <ContactSection />
       <Footer />
       <SplashCursor />

@@ -20,27 +20,52 @@ const SLICES = [
   "Hard Gel",
 ];
 
-export default function HeroSection() {
+export default function About() {
   const handleScroll = useScrollToElement();
 
   return (
     <>
       <HeroHeader />
       <main className="overflow-x-hidden">
-        <section>
-          <div className="pb-24 pt-12 md:pb-32 lg:pb-56 lg:pt-44">
+        <section id="about">
+          <div className="pb-24 pt-12 md:pb-32 lg:pb-14 lg:pt-20">
             <div className="relative mx-auto flex max-w-6xl flex-col px-6 lg:block">
               <div className="mx-auto max-w-lg text-center lg:ml-0 lg:w-1/2 lg:text-left">
-                <h1 className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16 xl:text-7xl">
-                  Glossé Nails
+                <h1 className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16 xl:text-6xl">
+                  About Us
                 </h1>
-                <p className="mt-8 max-w-2xl text-pretty text-lg">
-                  We are a team of passionate nail technicians who are dedicated
-                  to providing the highest quality of service to our clients.
+                <p className="mt-6 max-w-2xl text-pretty text-lg">
+                  At Glossé Nails, founded by Kate and Tracy—two friends with
+                  over a decade of experience—we believe beauty is more than
+                  skin deep. It&apos;s about confidence, connection, and care.
+                </p>
+                <p className="mt-4 max-w-2xl text-pretty text-lg">
+                  We take pride in those joyful moments when clients leave
+                  feeling not just polished, but truly uplifted. Whether
+                  it&apos;s a child beaming with excitement over their sparkling
+                  birthday nails, a nail art enthusiast collaborating with us
+                  for hours to bring their creative vision to life, or a senior
+                  client embracing us with gratitude after a gentle, respectful
+                  treatment—we cherish every interaction.
+                </p>
+                <p className="mt-4 max-w-2xl text-pretty text-lg">
+                  We&apos;re equally touched by the families and friends who
+                  turn their nail visits into a shared ritual of laughter,
+                  stories, and quality time.
+                </p>
+                <p className="mt-4 max-w-2xl text-pretty text-lg">
+                  Glossé Nails was created to be more than a salon. It&apos;s a
+                  welcoming space where every person feels seen, valued, and
+                  inspired to express their unique beauty.
                 </p>
 
-                <div className="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start">
-                  <Button asChild variant="secondary" size="lg" className="px-5 text-base">
+                <div className="mt-10 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start">
+                  <Button
+                    asChild
+                    variant="secondary"
+                    size="lg"
+                    className="px-5 text-base"
+                  >
                     <Link
                       href="#features"
                       onClick={(e) => handleScroll(e, LINKS[2])}
@@ -65,7 +90,7 @@ export default function HeroSection() {
                 </div>
               </div>
               <Image
-                className="-z-10 order-first ml-auto h-56 w-full object-cover invert sm:h-96 lg:absolute lg:inset-0 lg:-right-20 lg:-top-96 lg:order-last lg:h-max lg:w-2/3 lg:object-contain dark:mix-blend-lighten dark:invert-0"
+                className="-z-10 order-first ml-auto h-56 w-full object-cover invert sm:h-96 lg:absolute lg:inset-0 lg:-right-20 lg:-top-76 lg:order-last lg:h-max lg:w-2/3 lg:object-contain dark:mix-blend-lighten dark:invert-0"
                 src="https://ik.imagekit.io/lrigu76hy/tailark/abstract-bg.jpg?updatedAt=1745733473768"
                 alt="Abstract Object"
                 height="4000"
@@ -80,7 +105,7 @@ export default function HeroSection() {
           <div className="group relative m-auto max-w-7xl px-6">
             <div className="flex flex-col items-center md:flex-row">
               <div className="md:max-w-44 md:border-r md:pr-6">
-                <p className="text-end text-sm">Powering the best services</p>
+                <p className="text-end text-sm">Providing the best services</p>
               </div>
               <div className="relative py-6 md:w-[calc(100%-11rem)]">
                 <InfiniteSlider speedOnHover={20} speed={40} gap={112}>

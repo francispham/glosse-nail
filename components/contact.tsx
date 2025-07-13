@@ -1,8 +1,18 @@
 import React from "react";
 
+const HOURS = [
+  { day: "Monday", time: "10:00 AM - 7:00 PM" },
+  { day: "Tuesday", time: "10:00 AM - 7:00 PM" },
+  { day: "Wednesday", time: "10:00 AM - 7:00 PM" },
+  { day: "Thursday", time: "10:00 AM - 8:00 PM" },
+  { day: "Friday", time: "10:00 AM - 8:00 PM" },
+  { day: "Saturday", time: "10:00 AM - 7:00 PM" },
+  { day: "Sunday", time: "10:00 AM - 6:00 PM" },
+];
+
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-24 bg-card">
+    <section id="contact" className="py-24 dark:bg-transparent">
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-8">
           <h2 className="text-balance text-4xl font-semibold lg:text-5xl">
@@ -125,17 +135,15 @@ const ContactSection = () => {
                 </div>
                 <div className="ml-4 max-w-2xl w-full">
                   <h4 className="text-lg font-medium">Opening Hours</h4>
-                  <p className="flex justify-between mt-1 text-gray-400">
-                    <span>Monday - Wednesday & Saturday:</span>
-                    <span>10:00 AM - 7:00 PM</span>
-                  </p>
-                  <p className="flex justify-between mt-1 text-gray-400">
-                    <span>Thursday - Friday:</span>
-                    <span>10:00 AM - 8:00 PM</span>
-                  </p>
-                  <p className="flex justify-between mt-1 text-gray-400">
-                    <span>Sunday:</span> <span>10:00 AM - 6:00 PM</span>
-                  </p>
+                  {HOURS.map((hour) => (
+                    <p
+                      key={hour.day}
+                      className="flex justify-between mt-1 text-gray-400"
+                    >
+                      <span>{hour.day}</span>
+                      <span>{hour.time}</span>
+                    </p>
+                  ))}
                 </div>
               </div>
             </div>
