@@ -18,7 +18,7 @@ export const HeroHeader = () => {
 
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
-      setScrolled(latest > 0.05);
+      setScrolled(latest > 0.005);
     });
     return () => unsubscribe();
   }, [scrollYProgress]);
