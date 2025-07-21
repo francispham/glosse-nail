@@ -78,6 +78,10 @@
   --sidebar-ring: oklch(0.704 0.04 256.788);
 }
 
+.my-map {
+  filter: grayscale(40%) invert(100%) contrast(83%) brightness(100%);
+}
+
 .dark {
   --background: #181a1b;
   --foreground: #e8e6e3;

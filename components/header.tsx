@@ -10,6 +10,7 @@ import { LINKS } from "@/lib/constants";
 import { useScrollToElement } from "@/lib/hooks";
 import { Button } from "@/components/ui/button";
 import { InstagramLink } from "@/components/ui/instagram-link";
+import { TikTokLink } from "./ui/tiktok-link";
 
 export const HeroHeader = () => {
   const [menuState, setMenuState] = useState(false);
@@ -113,20 +114,25 @@ const LinkList = ({
 
   return (
     <>
-      {LINKS.map((item, index) => (
-        <li key={index}>
+      {LINKS.map((item) => (
+        <li key={item.title}>
           <Link
-            className="text-muted-foreground hover:text-accent-foreground block duration-150"
+            className="text-muted-foreground hover:text-primary block duration-150"
             href={item.href}
+            target={item.href.includes("#") ? "_self" : "_blank"}
+            rel="noopener noreferrer"
             onClick={(e) => {
-              handleScroll(e, item);
-              setMenuState?.(false);
+              if (item.href.includes("#")) {
+                handleScroll(e, item);
+                setMenuState?.(false);
+              }
             }}
           >
             <span>{item.title}</span>
           </Link>
         </li>
       ))}
+      <TikTokLink />
       <InstagramLink />
     </>
   );

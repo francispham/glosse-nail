@@ -7,7 +7,7 @@ import { HeroHeader } from "@/components/header";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import { useScrollToElement } from "@/lib/hooks";
-import { LINKS } from "@/lib/constants";
+import { FRESHA_LINK, LINKS } from "@/lib/constants";
 
 const SLICES = [
   "Waxing",
@@ -26,82 +26,84 @@ export default function About() {
   return (
     <>
       <HeroHeader />
-      <main className="overflow-x-hidden">
-        <section id="about">
-          <div className="pb-24 pt-12 md:pb-32 lg:pb-14 lg:pt-20">
-            <div className="relative mx-auto flex max-w-6xl flex-col px-6 lg:block">
-              <div className="mx-auto max-w-lg text-center lg:ml-0 lg:w-1/2 lg:text-left">
-                <h1 className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16 xl:text-6xl">
-                  About Us
-                </h1>
-                <p className="mt-6 max-w-2xl text-pretty text-lg">
-                  At Glossé Nails, founded by Kate and Tracy—two friends with
-                  over a decade of experience—we believe beauty is more than
-                  skin deep. It&apos;s about confidence, connection, and care.
-                </p>
-                <p className="mt-4 max-w-2xl text-pretty text-lg">
-                  We take pride in those joyful moments when clients leave
-                  feeling not just polished, but truly uplifted. Whether
-                  it&apos;s a child beaming with excitement over their sparkling
-                  birthday nails, a nail art enthusiast collaborating with us
-                  for hours to bring their creative vision to life, or a senior
-                  client embracing us with gratitude after a gentle, respectful
-                  treatment—we cherish every interaction.
-                </p>
-                <p className="mt-4 max-w-2xl text-pretty text-lg">
-                  We&apos;re equally touched by the families and friends who
-                  turn their nail visits into a shared ritual of laughter,
-                  stories, and quality time.
-                </p>
-                <p className="mt-4 max-w-2xl text-pretty text-lg">
-                  Glossé Nails was created to be more than a salon. It&apos;s a
-                  welcoming space where every person feels seen, valued, and
-                  inspired to express their unique beauty.
-                </p>
+      <section
+        id="about"
+        className="overflow-x-hidden h-screen flex flex-col justify-between"
+      >
+        <div className="pb-24 pt-12 md:pb-32 lg:pb-14 lg:pt-40">
+          <div className="relative mx-auto flex max-w-6xl flex-col px-6 lg:block">
+            <div className="mx-auto max-w-lg text-center lg:ml-0 lg:w-1/2 lg:text-left">
+              <h1 className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16 xl:text-6xl">
+                About Us
+              </h1>
+              <p className="mt-6 max-w-2xl text-pretty text-lg">
+                At Glossé Nails, founded by Kate and Tracy—two friends with over
+                a decade of experience—we believe beauty is more than skin deep.
+                It&apos;s about confidence, connection, and care.
+              </p>
+              <p className="mt-4 max-w-2xl text-pretty text-lg">
+                We take pride in those joyful moments when clients leave feeling
+                not just polished, but truly uplifted. Whether it&apos;s a child
+                beaming with excitement over their sparkling birthday nails, a
+                nail art enthusiast collaborating with us for hours to bring
+                their creative vision to life, or a senior client embracing us
+                with gratitude after a gentle, respectful treatment—we cherish
+                every interaction.
+              </p>
+              <p className="mt-4 max-w-2xl text-pretty text-lg">
+                We&apos;re equally touched by the families and friends who turn
+                their nail visits into a shared ritual of laughter, stories, and
+                quality time.
+              </p>
+              <p className="mt-4 max-w-2xl text-pretty text-lg">
+                Glossé Nails was created to be more than a salon. It&apos;s a
+                welcoming space where every person feels seen, valued, and
+                inspired to express their unique beauty.
+              </p>
 
-                <div className="mt-10 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start">
-                  <Button
-                    asChild
-                    variant="secondary"
-                    size="lg"
-                    className="px-5 text-base"
+              <div className="mt-10 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start">
+                <Button
+                  asChild
+                  variant="secondary"
+                  size="lg"
+                  className="px-5 text-base"
+                >
+                  <Link
+                    href={FRESHA_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <Link
-                      href="#features"
-                      onClick={(e) => handleScroll(e, LINKS[2])}
-                    >
-                      <span className="text-nowrap">Book an appointment</span>
-                    </Link>
-                  </Button>
-                  <Button
-                    key={2}
-                    asChild
-                    size="lg"
-                    variant="ghost"
-                    className="px-5 text-base"
+                    <span className="text-nowrap">Book an appointment</span>
+                  </Link>
+                </Button>
+                <Button
+                  key={2}
+                  asChild
+                  size="lg"
+                  variant="ghost"
+                  className="px-5 text-base"
+                >
+                  <Link
+                    href="#contact"
+                    onClick={(e) => handleScroll(e, LINKS[4])}
                   >
-                    <Link
-                      href="#contact"
-                      onClick={(e) => handleScroll(e, LINKS[4])}
-                    >
-                      <span className="text-nowrap">Contact us</span>
-                    </Link>
-                  </Button>
-                </div>
+                    <span className="text-nowrap">Contact us</span>
+                  </Link>
+                </Button>
               </div>
-              <Image
-                className="-z-10 order-first ml-auto h-56 w-full object-cover invert sm:h-96 lg:absolute lg:inset-0 lg:-right-20 lg:-top-76 lg:order-last lg:h-max lg:w-2/3 lg:object-contain dark:mix-blend-lighten dark:invert-0"
-                src="https://ik.imagekit.io/lrigu76hy/tailark/abstract-bg.jpg?updatedAt=1745733473768"
-                alt="Abstract Object"
-                height="4000"
-                width="3000"
-                priority
-              />
             </div>
+            <Image
+              className="-z-10 order-first ml-auto h-56 w-full object-cover invert sm:h-96 lg:absolute lg:inset-0 lg:-right-20 lg:-top-76 lg:order-last lg:h-max lg:w-2/3 lg:object-contain dark:mix-blend-lighten dark:invert-0"
+              src="https://ik.imagekit.io/lrigu76hy/tailark/abstract-bg.jpg?updatedAt=1745733473768"
+              alt="Abstract Object"
+              height="4000"
+              width="3000"
+              priority
+            />
           </div>
-        </section>
+        </div>
 
-        <section className="bg-background pb-2">
+        <section className="bg-background pb-4">
           <div className="group relative m-auto max-w-7xl px-6">
             <div className="flex flex-col items-center md:flex-row">
               <div className="md:max-w-44 md:border-r md:pr-6">
@@ -132,7 +134,7 @@ export default function About() {
             </div>
           </div>
         </section>
-      </main>
+      </section>
     </>
   );
 }
