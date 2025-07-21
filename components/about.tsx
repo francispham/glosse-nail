@@ -28,7 +28,7 @@ export default function About() {
       <HeroHeader />
       <section
         id="about"
-        className="overflow-x-hidden h-screen flex flex-col justify-between"
+        className="overflow-x-hidden lg:h-screen flex flex-col justify-between"
       >
         <div className="pb-24 pt-12 md:pb-32 lg:pb-14 lg:pt-40">
           <div className="relative mx-auto flex max-w-6xl flex-col px-6 lg:block">
@@ -93,7 +93,7 @@ export default function About() {
               </div>
             </div>
             <Image
-              className="-z-10 order-first ml-auto h-56 w-full object-cover invert sm:h-96 lg:absolute lg:inset-0 lg:-right-20 lg:order-last lg:h-max lg:w-4/7 lg:object-contain dark:mix-blend-lighten dark:invert-0 rounded-xl"
+              className="-z-10 order-first ml-auto h-66 mt-10 w-full object-cover invert sm:h-96 lg:absolute lg:inset-0 lg:-right-20 lg:order-last lg:h-max lg:w-4/7 lg:object-contain dark:mix-blend-lighten dark:invert-0 rounded-xl"
               src="https://res.cloudinary.com/ddz8cmo2p/image/upload/v1753133051/IMG_6818_ewjrzy.jpg"
               alt="Glossé Nails"
               height="560"
