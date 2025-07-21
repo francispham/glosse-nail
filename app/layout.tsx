@@ -16,6 +16,13 @@ export const metadata: Metadata = {
   title: "Glossé Nails",
   description:
     "Discover the art of nail design with Glossé Nails, where creativity meets elegance in David Village District.",
+  keywords: [
+    "Vancouver Nail Salon",
+    "Nail Art Vancouver",
+    "Manicure and Pedicure Vancouver",
+    "Gel Nails Vancouver",
+    "Nail Salon Davie Street Vancouver",
+  ],
 };
 
 export default function RootLayout({
