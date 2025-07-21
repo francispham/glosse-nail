@@ -12,7 +12,7 @@ const HOURS = [
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-24 dark:bg-transparent">
+    <section id="contact" className="py-24 bg-card">
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-8">
           <h2 className="text-balance text-4xl font-semibold lg:text-5xl">

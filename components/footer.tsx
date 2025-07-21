@@ -5,13 +5,24 @@ import Image from "next/image";
 import { InstagramLink } from "@/components/ui/instagram-link";
 import { LINKS } from "@/lib/constants";
 import { useScrollToElement } from "@/lib/hooks";
+import { TikTokLink } from "./ui/tiktok-link";
 
 export default function FooterSection() {
   const handleScroll = useScrollToElement();
 
   return (
-    <footer className="py-16  bg-card">
+    <footer className="py-16 dark:bg-transparent">
       <div className="mx-auto max-w-5xl px-6">
+        <div className="mx-auto block size-fit">
+          <Image
+            src="https://res.cloudinary.com/ddz8cmo2p/image/upload/v1753126139/890x472_2x_aijjzj.png"
+            alt="Google Map"
+            width={1200}
+            height={500}
+            className="mt-4 mb-12 lg:mt-8 lg:mb-18"
+          />
+        </div>
+
         <Link href="/" aria-label="go home" className="mx-auto block size-fit">
           <Image
             src="https://res.cloudinary.com/ddz8cmo2p/image/upload/v1750741597/Logo_nmcxy6.png"
@@ -33,6 +44,7 @@ export default function FooterSection() {
               <span>{link.title}</span>
             </Link>
           ))}
+          <TikTokLink />
           <InstagramLink />
         </div>
         <SocialLinks />
