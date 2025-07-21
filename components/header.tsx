@@ -51,7 +51,7 @@ export const HeroHeader = () => {
               >
                 <Image
                   src="https://res.cloudinary.com/ddz8cmo2p/image/upload/v1750741597/Glosse_nails_2_uxujwu.png"
-                  alt="Glosse Nails Logo"
+                  alt="Glossé Nails Logo"
                   width={100}
                   height={50}
                   className="h-9 w-auto lg:h-13"

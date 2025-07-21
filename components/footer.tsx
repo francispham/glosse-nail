@@ -33,7 +33,7 @@ export default function FooterSection() {
         <Link href="/" aria-label="go home" className="mx-auto block size-fit">
           <Image
             src="https://res.cloudinary.com/ddz8cmo2p/image/upload/v1750741597/Logo_nmcxy6.png"
-            alt="Glosse Nails Logo"
+            alt="Glossé Nails Logo"
             width={200}
             height={50}
             className="mt-4"

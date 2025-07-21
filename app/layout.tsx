@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Glosse Nails",
+  title: "Glossé Nails",
   description:
-    "Discover the art of nail design with Glosse Nails, where creativity meets elegance in David Village District.",
+    "Discover the art of nail design with Glossé Nails, where creativity meets elegance in David Village District.",
 };
 
 export default function RootLayout({
