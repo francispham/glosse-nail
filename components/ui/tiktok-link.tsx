@@ -6,10 +6,10 @@ export const TikTokLink = () => (
     target="_blank"
     rel="noopener noreferrer"
     aria-label="TikTok"
-    className="text-muted-foreground hover:text-primary block"
+    className="text-muted-foreground hover:text-primary block duration-150"
   >
     <svg
-      className="size-6"
+      className="size-6 relative top-[-1px] right-1"
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
