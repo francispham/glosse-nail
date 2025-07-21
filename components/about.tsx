@@ -93,11 +93,11 @@ export default function About() {
               </div>
             </div>
             <Image
-              className="-z-10 order-first ml-auto h-56 w-full object-cover invert sm:h-96 lg:absolute lg:inset-0 lg:-right-20 lg:-top-76 lg:order-last lg:h-max lg:w-2/3 lg:object-contain dark:mix-blend-lighten dark:invert-0"
-              src="https://ik.imagekit.io/lrigu76hy/tailark/abstract-bg.jpg?updatedAt=1745733473768"
-              alt="Abstract Object"
-              height="4000"
-              width="3000"
+              className="-z-10 order-first ml-auto h-56 w-full object-cover invert sm:h-96 lg:absolute lg:inset-0 lg:-right-20 lg:order-last lg:h-max lg:w-4/7 lg:object-contain dark:mix-blend-lighten dark:invert-0 rounded-xl"
+              src="https://res.cloudinary.com/ddz8cmo2p/image/upload/v1753133051/IMG_6818_ewjrzy.jpg"
+              alt="Glossé Nails"
+              height="560"
+              width="440"
               priority
             />
           </div>
