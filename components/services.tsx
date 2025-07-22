@@ -167,7 +167,7 @@ const ServicesSection = () => {
           {/* Combo Services */}
           <Card className="p-6 shadow-lg rounded-lg">
             <h3 className="text-2xl font-bold  mt-4">Combo Services</h3>
-            <ul className="space-y-5 m-4">
+            <ul className="space-y-3 m-0 lg:space-y-5 lg:m-4">
               {COMBOS.map((combo, index) => (
                 <li key={index} className="flex justify-between">
                   <span>{combo.title}</span>
@@ -184,7 +184,7 @@ const ServicesSection = () => {
           {/* Extension Services */}
           <Card className="p-6 shadow-lg rounded-lg">
             <h3 className="text-2xl font-bold mt-4">Extension Services</h3>
-            <ul className="space-y-5 m-4">
+            <ul className="space-y-3 m-0">
               {EXTENSION_SERVICES.map((service, index) => (
                 <li key={index} className="flex justify-between">
                   <span>{service.title}</span>
@@ -200,13 +200,13 @@ const ServicesSection = () => {
           {/* Add-ons */}
           <Card className="p-6 shadow-lg rounded-lg">
             <h3 className="text-2xl font-bold mt-4">Add-ons</h3>
-            <ul className="space-y-5 m-4">
+            <ul className="space-y-3 m-0">
               {ADD_ONS.map((addOn, index) => (
                 <li
                   key={index}
                   className={
                     index === 2
-                      ? "text-sm text-gray-400 ml-4"
+                      ? "text-sm text-gray-400 ml-0 lg:ml-4"
                       : "flex justify-between"
                   }
                 >
@@ -247,7 +247,7 @@ const ServicesSection = () => {
               <li className="font-medium mt-4">
                 <strong>Group Party</strong>
               </li>
-              <li className="ml-4">
+              <li className="ml-4 text-sm">
                 Booking for 5 or More Guests and enjoy FREE special drink and
                 snack on us
               </li>
@@ -267,8 +267,12 @@ const ServicesSection = () => {
 
               <li className="flex justify-between ml-4">
                 <span>Birthday</span>
+                <span className="font-semibold">15% Off</span>
+              </li>
+              <li className="flex justify-between ml-4">
+                <span />
                 <span className="font-semibold">
-                  15% plus Special Gift (show ID)
+                  plus Special Gift (show ID)
                 </span>
               </li>
             </ul>
@@ -277,7 +281,7 @@ const ServicesSection = () => {
           {/* Waxing */}
           <Card className="p-6 shadow-lg rounded-lg">
             <h3 className="text-2xl font-bold mt-4">Waxing Services</h3>
-            <ul className="space-y-5 m-4">
+            <ul className="space-y-3 m-0">
               {WAXING_SERVICES.map((service, index) => (
                 <li key={index} className="flex justify-between">
                   <span>{service.title}</span>
@@ -290,7 +294,7 @@ const ServicesSection = () => {
           {/* More Waxing */}
           <Card className="p-6 shadow-lg rounded-lg">
             <h3 className="text-2xl font-bold mt-4">More Waxing Services</h3>
-            <ul className="space-y-5 m-4">
+            <ul className="space-y-3 m-0">
               {MORE_WAXING_SERVICES.map((service, index) => (
                 <li key={index} className="flex justify-between">
                   <span>{service.title}</span>
@@ -303,7 +307,7 @@ const ServicesSection = () => {
 
         <div className="mt-12 text-center">
           <h3 className="text-balance text-2xl font-semibold lg:text-3xl mb-4">
-            GLOSSÉ NAIL – POLICIES & ETIQUETTE
+            Policies & Etiquette
           </h3>
 
           {POLICIES.map((policy, index) => (

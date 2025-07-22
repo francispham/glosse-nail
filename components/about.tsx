@@ -1,11 +1,12 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
-import { HeroHeader } from "@/components/header";
+import { BooleanStateAction } from "./ui/promo-modal";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
+
+import { HeroHeader } from "@/components/header";
 import { useScrollToElement } from "@/lib/hooks";
 import { FRESHA_LINK, LINKS } from "@/lib/constants";
 
@@ -20,12 +21,16 @@ const SLICES = [
   "Hard Gel",
 ];
 
-export default function About() {
+type AboutProps = {
+  setOpenModal: BooleanStateAction;
+};
+
+export default function About({ setOpenModal }: AboutProps) {
   const handleScroll = useScrollToElement();
 
   return (
     <>
-      <HeroHeader />
+      <HeroHeader setOpenModal={setOpenModal} />
       <section
         id="about"
         className="overflow-x-hidden lg:h-screen flex flex-col justify-between"

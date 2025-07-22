@@ -11,12 +11,14 @@ export default function InstagramCard({ url }: { url: string }) {
   }, []);
 
   if (!isClient)
-    return <div className="h-64 w-full animate-pulse rounded-lg bg-muted" />;
+    return (
+      <div className="h-64 w-full animate-pulse rounded-lg dark:bg-transparent" />
+    );
 
   return (
     <Card
       suppressHydrationWarning
-      className="group border-0 shadow-none items-center py-0"
+      className="group border-0 shadow-none items-center py-0 dark:bg-transparent"
     >
       <InstagramEmbed
         url={url}
@@ -24,7 +26,6 @@ export default function InstagramCard({ url }: { url: string }) {
           maxWidth: 528,
           minWidth: 328,
           maxHeight: 533,
-          backgroundColor: `var(--primary-foreground) !important`,
         }}
         placeholderDisabled
       />

@@ -8,14 +8,20 @@ import { useScroll, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { LINKS } from "@/lib/constants";
 import { useScrollToElement } from "@/lib/hooks";
+
 import { Button } from "@/components/ui/button";
 import { InstagramLink } from "@/components/ui/instagram-link";
 import { TikTokLink } from "./ui/tiktok-link";
+import { BooleanStateAction } from "./ui/promo-modal";
 
-export const HeroHeader = () => {
-  const [menuState, setMenuState] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+type HeroHeaderProps = {
+  setOpenModal: BooleanStateAction;
+};
+
+export const HeroHeader = ({ setOpenModal }: HeroHeaderProps) => {
   const { scrollYProgress } = useScroll();
+  const [scrolled, setScrolled] = useState(false);
+  const [menuState, setMenuState] = useState(false);
 
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
@@ -69,7 +75,7 @@ export const HeroHeader = () => {
 
               <div className="hidden lg:block">
                 <ul className="flex gap-8 text-sm">
-                  <LinkList />
+                  <LinkList setOpenModal={setOpenModal} />
                 </ul>
               </div>
             </div>
@@ -77,7 +83,10 @@ export const HeroHeader = () => {
             <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
               <div className="lg:hidden">
                 <ul className="space-y-6 text-base">
-                  <LinkList setMenuState={setMenuState} />
+                  <LinkList
+                    setOpenModal={setOpenModal}
+                    setMenuState={setMenuState}
+                  />
                 </ul>
               </div>
               <AuthButtons />
@@ -107,8 +116,10 @@ const AuthButtons = ({ show = false }: { show?: boolean }) =>
 
 const LinkList = ({
   setMenuState,
+  setOpenModal,
 }: {
-  setMenuState?: (state: boolean) => void;
+  setOpenModal: BooleanStateAction;
+  setMenuState?: BooleanStateAction;
 }) => {
   const handleScroll = useScrollToElement();
 
@@ -120,11 +131,16 @@ const LinkList = ({
             className="text-muted-foreground hover:text-primary block duration-150"
             href={item.href}
             target={item.href.includes("#") ? "_self" : "_blank"}
-            rel="noopener noreferrer"
+            rel={item.href.includes("#") ? "noreferrer" : "noopener noreferrer"}
             onClick={(e) => {
               if (item.href.includes("#")) {
                 handleScroll(e, item);
-                setMenuState?.(false);
+
+                if (item.href.includes("promotions")) {
+                  setOpenModal(true);
+                } else {
+                  setMenuState?.(false);
+                }
               }
             }}
           >
