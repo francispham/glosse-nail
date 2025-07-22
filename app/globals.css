@@ -81,6 +81,9 @@
 .my-map {
   filter: grayscale(40%) invert(100%) contrast(83%) brightness(100%);
 }
+.webkit {
+  width: "-webkit-fill-available";
+}
 
 .dark {
   --background: #181a1b;
