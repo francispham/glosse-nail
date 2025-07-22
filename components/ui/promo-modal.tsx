@@ -1,9 +1,9 @@
 "use client";
 import React, { Dispatch, SetStateAction, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
-const PROMO_START = new Date("2025-08-01T00:00:00Z");
-const PROMO_END = new Date("2025-08-15T00:00:00Z");
-const LOCALSTORAGE_KEY = "promo20off_closed";
+import { FRESHA_LINK } from "@/lib/constants";
 
 export type BooleanStateAction = Dispatch<SetStateAction<boolean>>;
 type PromoModalProps = {
@@ -14,19 +14,9 @@ type PromoModalProps = {
 export default function PromoModal(props: PromoModalProps) {
   const { openModal, setOpenModal } = props;
 
-  // Show modal during promo period if not closed
-  useEffect(() => {
-    const now = new Date();
-    const closed = localStorage.getItem(LOCALSTORAGE_KEY);
-    if (now >= PROMO_START && now < PROMO_END && !closed) {
-      setOpenModal(true);
-    }
-  }, [setOpenModal]);
+  useEffect(() => setOpenModal(true), [setOpenModal]);
 
-  const handleClose = () => {
-    setOpenModal(false);
-    localStorage.setItem(LOCALSTORAGE_KEY, "1");
-  };
+  const handleClose = () => setOpenModal(false);
 
   // Robust scroll lock
   useEffect(() => {
@@ -53,16 +43,36 @@ export default function PromoModal(props: PromoModalProps) {
         >
           ×
         </button>
-        <h2 className="text-3xl mb-4">🎉 20% OFF!</h2>
+        <Image
+          src="https://res.cloudinary.com/ddz8cmo2p/image/upload/v1750741597/Logo_nmcxy6.png"
+          alt="Glosse Nails Logo"
+          className="mx-auto mb-4"
+          width={150}
+          height={50}
+        />
+        <h2 className="text-3xl mb-4"> Grand Opening Offer!</h2>
         <p className="text-lg mb-6">
-          Enjoy <b>20% off</b> all services!
+          ✨ Celebrate our grand opening in style — enjoy an exclusive{" "}
+          <b>20% OFF</b> on all nail services, our personal thank-you for joining
+          us. Available for a limited time!
           <br />
-          <span className="text-[#3391ff]">August 1st – 14th, 2025</span>
+          <span className="text-[#3391ff]">🎉 August 1st – 14th, 2025</span>
         </p>
         <div className="text-sm text-[#b2b2b2]">
-          To celebrate our brand opening event, enjoy this special offer!
+          <Link
+            href={FRESHA_LINK}
+            onClick={handleClose}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-3 py-1 mt-1 text-base font-bold rounded-full text-black shadow-lg ring-2 ring-transparent hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/40 transition-all duration-200 animate-pulse"
+            style={{
+              background:
+                "linear-gradient(90deg, #e40303 0%, #ff8c00 14%, #ffed00 28%, #008026 42%, #004dff 57%, #750787 71%, #ffffff 85%, #ffaad5 100%)",
+            }}
+          >
+            Booking Now!
+          </Link>
           <br />
-          <b>Limited time only!</b>
         </div>
       </div>
     </div>
