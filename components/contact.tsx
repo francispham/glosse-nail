@@ -1,5 +1,8 @@
 import React from "react";
 
+const PHONE = "(778) 969-6688";
+const EMAIL = "info@glossenails.ca";
+const ADDRESS = "1196 Davie St, Vancouver, BC V6E 1N1";
 const HOURS = [
   { day: "Monday", time: "10:00 AM - 7:00 PM" },
   { day: "Tuesday", time: "10:00 AM - 7:00 PM" },
@@ -50,7 +53,7 @@ const ContactSection = () => {
                     />
                   </svg>
                 </div>
-                <div className="ml-4">
+                <div className="ml-1 lg:ml-4">
                   <h4 className="text-lg font-medium">Address</h4>
                   <a
                     href="https://www.google.com/maps/place/Sassy+Nails+Spa+and+Hair/@49.2815403,-123.133234,17z/data=!3m1!4b1!4m6!3m5!1s0x5486722b7ba5cb6b:0x72f73e8d532b32ea!8m2!3d49.2815403!4d-123.133234!16s%2Fg%2F1td1pkrl?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D"
@@ -58,7 +61,7 @@ const ContactSection = () => {
                     rel="noopener noreferrer"
                     className="mt-1 text-gray-400 hover:text-primary transition-colors"
                   >
-                    1196 Davie St, Vancouver, BC V6E 1N1
+                    {ADDRESS}
                   </a>
                 </div>
               </div>
@@ -79,13 +82,13 @@ const ContactSection = () => {
                     />
                   </svg>
                 </div>
-                <div className="ml-4">
+                <div className="ml-1 lg:ml-4">
                   <h4 className="text-lg font-medium">Phone</h4>
                   <a
                     href="tel:+17789696688"
                     className="mt-1 text-gray-400 hover:text-primary transition-colors"
                   >
-                    (778) 969-6688
+                    {PHONE}
                   </a>
                 </div>
               </div>
@@ -106,13 +109,13 @@ const ContactSection = () => {
                     />
                   </svg>
                 </div>
-                <div className="ml-4">
+                <div className="ml-1 lg:ml-4">
                   <h4 className="text-lg font-medium">Email</h4>
                   <a
                     href="mailto:info@glossenails.ca"
                     className="mt-1 text-gray-400 hover:text-primary transition-colors"
                   >
-                    info@glossenails.ca
+                    {EMAIL}
                   </a>
                 </div>
               </div>
@@ -133,7 +136,7 @@ const ContactSection = () => {
                     />
                   </svg>
                 </div>
-                <div className="ml-4 max-w-2xl w-full">
+                <div className="ml-1 max-w-2xl lg:ml-4 w-full">
                   <h4 className="text-lg font-medium">Opening Hours</h4>
                   {HOURS.map((hour) => (
                     <p
