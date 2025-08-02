@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const InstagramLink = () => (
   <Link
-    href="https://www.instagram.com/glosse.nails_1196/#"
+    href="https://www.instagram.com/glosse.nails_1196/"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Instagram"

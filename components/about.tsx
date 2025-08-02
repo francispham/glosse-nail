@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { HeroHeader } from "@/components/header";
+
 import { Button } from "@/components/ui/button";
-import { BooleanStateAction } from "./ui/promo-modal";
+import { BooleanStateAction } from "@/components/ui/promo-modal";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
-import { HeroHeader } from "@/components/header";
 import { useScrollToElement } from "@/lib/hooks";
 import { FRESHA_LINK, LINKS } from "@/lib/constants";
 
