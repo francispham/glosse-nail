@@ -11,6 +11,10 @@ import { BooleanStateAction } from "./ui/promo-modal";
 type FooterSectionProps = {
   setOpenModal: BooleanStateAction;
 };
+
+const EMBED_MAP_URL =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.7285683720734!2d-123.13580892231255!3d49.28154027139271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486722b7b836aeb%3A0xb1143d5def9b6dea!2sGloss%C3%A9%20Nails!5e0!3m2!1sen!2sca!4v1754116819336!5m2!1sen!2sca";
+
 export default function FooterSection({ setOpenModal }: FooterSectionProps) {
   const handleScroll = useScrollToElement();
 
@@ -19,7 +23,7 @@ export default function FooterSection({ setOpenModal }: FooterSectionProps) {
       <div className="mx-auto max-w-5xl px-6">
         <div className="webkit">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.7285683720706!2d-123.13580892255521!3d49.28154027139276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486722b7ba5cb6b%3A0x72f73e8d532b32ea!2sGloss%C3%A9%20Nails!5e0!3m2!1sen!2sca!4v1753128482849!5m2!1sen!2sca"
+            src={EMBED_MAP_URL}
             width="100%"
             height="500"
             loading="lazy"
