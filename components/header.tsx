@@ -10,9 +10,10 @@ import { LINKS } from "@/lib/constants";
 import { useScrollToElement } from "@/lib/hooks";
 
 import { Button } from "@/components/ui/button";
+import { TikTokLink } from "@/components/ui/tiktok-link";
+import { FacebookLink } from "@/components/ui/facebook-link";
 import { InstagramLink } from "@/components/ui/instagram-link";
-import { TikTokLink } from "./ui/tiktok-link";
-import { BooleanStateAction } from "./ui/promo-modal";
+import { BooleanStateAction } from "@/components/ui/promo-modal";
 
 type HeroHeaderProps = {
   setOpenModal: BooleanStateAction;
@@ -148,6 +149,7 @@ const LinkList = ({
           </Link>
         </li>
       ))}
+      <FacebookLink />
       <TikTokLink />
       <InstagramLink />
     </>

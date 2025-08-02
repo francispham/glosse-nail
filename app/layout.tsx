@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -20,8 +21,12 @@ export const metadata: Metadata = {
     "Vancouver Nail Salon",
     "Nail Art Vancouver",
     "Manicure and Pedicure Vancouver",
-    "Gel Nails Vancouver",
+    "Glosse Nails Vancouver",
     "Nail Salon Davie Street Vancouver",
+    "Glossé Nails",
+    "Glosse Nails",
+    "glossenails",
+    "glossénails",
   ],
 };
 
@@ -36,6 +41,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
