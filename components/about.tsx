@@ -21,6 +21,12 @@ const SLICES = [
   "Hard Gel",
 ];
 
+const ABOUT = [
+  "At Glossé Nails, founded by Kate and Tracy—two friends with over a decade of experience—we believe beauty is more than skin deep. It's about confidence, connection, and care.",
+  "We take pride in those joyful moments when clients leave feeling not just polished, but truly uplifted. Whether it's a child beaming with excitement over their sparkling birthday nails, a nail art enthusiast collaborating with us for hours to bring their creative vision to life, or a senior client embracing us with gratitude after a gentle, respectful treatment—we cherish every interaction.",
+  "We're equally touched by the families and friends who turn their nail visits into a shared ritual of laughter, stories, and quality time.",
+  "Glossé Nails was created to be more than a salon. It's a welcoming space where every person feels seen, valued, and inspired to express their unique beauty.",
+];
 type AboutProps = {
   setOpenModal: BooleanStateAction;
 };
@@ -38,34 +44,17 @@ export default function About({ setOpenModal }: AboutProps) {
         <div className="pb-24 pt-12 md:pb-32 lg:pb-14 lg:pt-40">
           <div className="relative mx-auto flex max-w-6xl flex-col px-6 lg:block">
             <div className="mx-auto max-w-lg text-center lg:ml-0 lg:w-1/2 lg:text-left">
-              <h1 className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16 xl:text-6xl">
+              <h1 className="mt-8 mb-6 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16 xl:text-6xl">
                 About Us
               </h1>
-              <p className="mt-6 max-w-2xl text-pretty text-lg">
-                At Glossé Nails, founded by Kate and Tracy—two friends with over
-                a decade of experience—we believe beauty is more than skin deep.
-                It&apos;s about confidence, connection, and care.
-              </p>
-              <p className="mt-4 max-w-2xl text-pretty text-lg">
-                We take pride in those joyful moments when clients leave feeling
-                not just polished, but truly uplifted. Whether it&apos;s a child
-                beaming with excitement over their sparkling birthday nails, a
-                nail art enthusiast collaborating with us for hours to bring
-                their creative vision to life, or a senior client embracing us
-                with gratitude after a gentle, respectful treatment—we cherish
-                every interaction.
-              </p>
-              <p className="mt-4 max-w-2xl text-pretty text-lg">
-                We&apos;re equally touched by the families and friends who turn
-                their nail visits into a shared ritual of laughter, stories, and
-                quality time.
-              </p>
-              <p className="mt-4 max-w-2xl text-pretty text-lg">
-                Glossé Nails was created to be more than a salon. It&apos;s a
-                welcoming space where every person feels seen, valued, and
-                inspired to express their unique beauty.
-              </p>
-
+              {ABOUT.map((paragraph) => (
+                <p
+                  key={paragraph}
+                  className="mt-4 max-w-2xl text-pretty text-lg"
+                >
+                  {paragraph}
+                </p>
+              ))}
               <div className="mt-10 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start">
                 <Button
                   asChild

@@ -20,8 +20,12 @@ export const metadata: Metadata = {
     "Vancouver Nail Salon",
     "Nail Art Vancouver",
     "Manicure and Pedicure Vancouver",
-    "Gel Nails Vancouver",
+    "Glosse Nails Vancouver",
     "Nail Salon Davie Street Vancouver",
+    "Glossé Nails",
+    "Glosse Nails",
+    "glossenails",
+    "glossénails",
   ],
 };
 
