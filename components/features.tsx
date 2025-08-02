@@ -1,4 +1,4 @@
-import InstagramCard from "./ui/instagram-card";
+import InstagramCard from "@/components/ui/instagram-card";
 
 export const INSTAGRAM_POSTS = [
   { id: 1, url: "https://www.instagram.com/p/DJaGMLkBg5H/" },

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { InstagramEmbed } from "react-social-media-embed";
+
 import { Card } from "@/components/ui/card";
 
 export default function InstagramCard({ url }: { url: string }) {

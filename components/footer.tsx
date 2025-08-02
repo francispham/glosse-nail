@@ -3,10 +3,11 @@ import Image from "next/image";
 
 import { LINKS } from "@/lib/constants";
 import { useScrollToElement } from "@/lib/hooks";
-import { InstagramLink } from "@/components/ui/instagram-link";
 
-import { TikTokLink } from "./ui/tiktok-link";
-import { BooleanStateAction } from "./ui/promo-modal";
+import { TikTokLink } from "@/components/ui/tiktok-link";
+import { FacebookLink } from "@/components/ui/facebook-link";
+import { InstagramLink } from "@/components/ui/instagram-link";
+import { BooleanStateAction } from "@/components/ui/promo-modal";
 
 type FooterSectionProps = {
   setOpenModal: BooleanStateAction;
@@ -62,6 +63,7 @@ export default function FooterSection({ setOpenModal }: FooterSectionProps) {
               <span>{item.title}</span>
             </Link>
           ))}
+          <FacebookLink />
           <TikTokLink />
           <InstagramLink />
         </div>
