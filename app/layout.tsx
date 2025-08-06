@@ -46,23 +46,8 @@ export const metadata: Metadata = {
     title: "Glossé Nails",
     statusBarStyle: "black-translucent",
     capable: true,
-    startupImage: [
-      {
-        media:
-          "(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)",
-        url: "/web-app-manifest-192x192.png",
-      },
-      {
-        media:
-          "(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)",
-        url: "/web-app-manifest-512x512.png",
-      },
-    ],
+    startupImage: "/apple-icon.png",
   },
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#000000" },
-  ],
 };
 
 export default function RootLayout({
@@ -74,6 +59,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <meta name="apple-mobile-web-app-title" content="Glossé Nails" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" type="image/png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
