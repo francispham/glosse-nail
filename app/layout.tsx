@@ -42,6 +42,27 @@ export const metadata: Metadata = {
       },
     ],
   },
+  appleWebApp: {
+    title: "Glossé Nails",
+    statusBarStyle: "black-translucent",
+    capable: true,
+    startupImage: [
+      {
+        media:
+          "(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)",
+        url: "/web-app-manifest-192x192.png",
+      },
+      {
+        media:
+          "(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)",
+        url: "/web-app-manifest-512x512.png",
+      },
+    ],
+  },
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+  ],
 };
 
 export default function RootLayout({
