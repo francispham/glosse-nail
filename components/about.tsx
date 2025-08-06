@@ -80,7 +80,7 @@ export default function About({ setOpenModal }: AboutProps) {
                 >
                   <Link
                     href="#contact"
-                    onClick={(e) => handleScroll(e, LINKS[4])}
+                    onClick={(e) => handleScroll(e, LINKS[3])}
                   >
                     <span className="text-nowrap">Contact us</span>
                   </Link>
