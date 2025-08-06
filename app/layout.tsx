@@ -28,6 +28,20 @@ export const metadata: Metadata = {
     "glossenails",
     "glossénails",
   ],
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/favicon-light.ico",
+        href: "/favicon-light.ico",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/favicon-dark.ico",
+        href: "/favicon-dark.ico",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -37,6 +51,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <meta name="apple-mobile-web-app-title" content="Glossé Nails" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" type="image/png" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
