@@ -42,12 +42,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  appleWebApp: {
-    title: "Glossé Nails",
-    statusBarStyle: "black-translucent",
-    capable: true,
-    startupImage: "/apple-icon.png",
-  },
 };
 
 export default function RootLayout({
