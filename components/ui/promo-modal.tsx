@@ -46,7 +46,7 @@ export default function PromoModal(props: PromoModalProps) {
         <Image
           src="https://res.cloudinary.com/ddz8cmo2p/image/upload/v1750741597/Logo_nmcxy6.png"
           alt="Glosse Nails Logo"
-          className="mx-auto mb-4"
+          className="mx-auto mb-4 pt-10"
           width={150}
           height={50}
         />
@@ -58,7 +58,7 @@ export default function PromoModal(props: PromoModalProps) {
           <br />
           <span className="text-[#3391ff]">🎉 August 1st – 15th, 2025</span>
         </p>
-        <div className="text-sm text-[#b2b2b2]">
+        <div className="pb-5 text-sm text-[#b2b2b2]">
           <Link
             href={FRESHA_LINK}
             onClick={handleClose}
