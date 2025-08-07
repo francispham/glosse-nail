@@ -8,9 +8,9 @@ import { useScroll, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { LINKS } from "@/lib/constants";
 import { useScrollToElement } from "@/lib/hooks";
-
 import { Button } from "@/components/ui/button";
 import { TikTokLink } from "@/components/ui/tiktok-link";
+import { SocialLinks } from "@/components/ui/social-links";
 import { FacebookLink } from "@/components/ui/facebook-link";
 import { InstagramLink } from "@/components/ui/instagram-link";
 import { BooleanStateAction } from "@/components/ui/promo-modal";
@@ -76,7 +76,7 @@ export const HeroHeader = ({ setOpenModal }: HeroHeaderProps) => {
 
               <div className="hidden lg:block">
                 <ul className="flex gap-8 text-sm">
-                  <LinkList setOpenModal={setOpenModal} />
+                  <LinkList menuState={menuState} setOpenModal={setOpenModal} />
                 </ul>
               </div>
             </div>
@@ -85,6 +85,7 @@ export const HeroHeader = ({ setOpenModal }: HeroHeaderProps) => {
               <div className="lg:hidden">
                 <ul className="space-y-6 text-base">
                   <LinkList
+                    menuState={menuState}
                     setOpenModal={setOpenModal}
                     setMenuState={setMenuState}
                   />
@@ -115,13 +116,13 @@ const AuthButtons = ({ show = false }: { show?: boolean }) =>
     </div>
   ) : null;
 
-const LinkList = ({
-  setMenuState,
-  setOpenModal,
-}: {
+type LinkListProps = {
+  menuState: boolean;
   setOpenModal: BooleanStateAction;
   setMenuState?: BooleanStateAction;
-}) => {
+};
+
+const LinkList = ({ menuState, setMenuState, setOpenModal }: LinkListProps) => {
   const handleScroll = useScrollToElement();
 
   return (
@@ -148,10 +149,18 @@ const LinkList = ({
             <span>{item.title}</span>
           </Link>
         </li>
-      ))}
-      <FacebookLink />
-      <TikTokLink />
-      <InstagramLink />
+      ))}{" "}
+      {menuState ? (
+        <div className="my-8 flex flex-wrap gap-6 text-sm">
+          <SocialLinks />
+        </div>
+      ) : (
+        <>
+          <FacebookLink />
+          <TikTokLink />
+          <InstagramLink />
+        </>
+      )}
     </>
   );
 };
