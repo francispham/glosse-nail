@@ -38,7 +38,7 @@ export default function PromoModal(props: PromoModalProps) {
       <div className="relative max-w-[400px] md:max-w-xl w-full bg-[#232527] text-[#e8e6e3] p-8 md:p-12 rounded-2xl shadow-2xl text-center">
         <button
           onClick={handleClose}
-          className="absolute top-3 right-4 text-[#e8e6e3] text-2xl hover:text-[#3391ff] transition-colors"
+          className="absolute top-3 right-4 text-[#e8e6e3] text-4xl hover:text-[#3391ff] transition-colors"
           aria-label="Close promotion modal"
         >
           ×
