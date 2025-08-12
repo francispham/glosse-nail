@@ -240,7 +240,7 @@ const ServicesSection = () => {
                 </li>
               ))}
 
-              <li className="text-sm text-gray-400">
+              <li className="text-xs text-gray-400 lg:text-sm">
                 **Note: Additional $5 for Gel Removal
               </li>
             </ul>
@@ -257,7 +257,7 @@ const ServicesSection = () => {
                 </li>
               ))}
 
-              <li className="text-sm text-gray-400">
+              <li className="text-xs text-gray-400 lg:text-sm">
                 **Note: Additional $5 for Gel Removal
               </li>
             </ul>
@@ -279,14 +279,14 @@ const ServicesSection = () => {
           {/* Extension */}
           <Card className="p-6 shadow-lg rounded-lg">
             <h3 className="text-2xl font-bold mt-4">Extension</h3>
-            <ul className="space-y-3 m-4">
+            <ul className="space-y-3 m-0 lg:space-y-5 lg:m-4">
               {EXTENSION.map((service, index) => (
                 <li key={index} className="flex justify-between">
                   <span>{service.title}</span>
                   <span className="font-semibold">{service.price}</span>
                 </li>
               ))}
-              <li className="text-sm text-gray-400">
+              <li className="text-xs text-gray-400 lg:text-sm">
                 **Note: Additional $10 for Removal
               </li>
             </ul>
@@ -295,13 +295,13 @@ const ServicesSection = () => {
           {/* Add-ons */}
           <Card className="p-6 shadow-lg rounded-lg">
             <h3 className="text-2xl font-bold mt-4">Add-ons</h3>
-            <ul className="space-y-3 m-4">
+            <ul className="space-y-3 m-0 lg:m-4">
               {ADD_ONS.map((addOn, index) => (
                 <li
                   key={index}
                   className={
                     index === 2
-                      ? "text-sm text-gray-400 ml-0 lg:ml-4"
+                      ? "text-xs text-gray-400 ml-0 lg:ml-4 lg:text-sm"
                       : "flex justify-between"
                   }
                 >
@@ -315,7 +315,7 @@ const ServicesSection = () => {
           {/* Special Discounts */}
           <Card className="p-6 shadow-lg rounded-lg">
             <h3 className="text-2xl font-bold mt-4">Special Discounts</h3>
-            <ul className="space-y-3 m-4">
+            <ul className="space-y-3 m-0 lg:m-4">
               <li className="font-medium">
                 <strong>Kid Services (Kid under 10 years)</strong>
               </li>
@@ -324,13 +324,17 @@ const ServicesSection = () => {
                 <span>Regular Manicure</span>
                 <span className="font-semibold">$11</span>
               </li>
-              <li className="text-sm text-gray-400 ml-8">with Shellac +$5</li>
+              <li className="text-xs text-gray-400 ml-8 lg:text-sm">
+                with Shellac +$5
+              </li>
 
               <li className="flex justify-between ml-4">
                 <span>Regular Pedicure</span>
                 <span className="font-semibold">$21</span>
               </li>
-              <li className="text-sm text-gray-400 ml-8">with Shellac +$5</li>
+              <li className="text-xs text-gray-400 ml-8 lg:text-sm">
+                with Shellac +$5
+              </li>
 
               <li className="font-medium mt-4 flex justify-between">
                 <span>
@@ -366,7 +370,7 @@ const ServicesSection = () => {
               </li>
               <li className="flex justify-between ml-4">
                 <span />
-                <span className="text-sm text-gray-400 italic">
+                <span className="text-xs text-gray-400 italic lg:text-sm">
                   plus Special Gift (show ID)
                 </span>
               </li>
