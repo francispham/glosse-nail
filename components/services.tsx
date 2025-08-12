@@ -2,6 +2,52 @@ import React from "react";
 
 import { Card } from "@/components/ui/card";
 
+const HANDS = [
+  {
+    title: "Regular Manicure",
+    price: "$26",
+  },
+  {
+    title: "Regular Polish Change",
+    price: "$16",
+  },
+  {
+    title: "Shellac/Gel Manicure",
+    price: "$36",
+  },
+  {
+    title: "Shellac/Gel Polish Change",
+    price: "$26",
+  },
+  {
+    title: "Deluxe (Paraffin or Seasonal Mask)",
+    price: "$10",
+  },
+];
+
+const TOES = [
+  {
+    title: "Regular Pedicure",
+    price: "$38",
+  },
+  {
+    title: "Regular Polish Change",
+    price: "$21",
+  },
+  {
+    title: "Shellac/Gel Pedicure",
+    price: "$51",
+  },
+  {
+    title: "Shellac/Gel Polish Change",
+    price: "$31",
+  },
+  {
+    title: "Deluxe (Paraffin or Seasonal Mask)",
+    price: "$15",
+  },
+];
+
 const COMBOS = [
   {
     title: "Regular Manicure & Pedicure",
@@ -21,7 +67,7 @@ const COMBOS = [
   },
 ];
 
-const EXTENSION_SERVICES = [
+const EXTENSION = [
   {
     title: "Acrylic Set (short and medium)",
     price: "$61",
@@ -51,11 +97,11 @@ const EXTENSION_SERVICES = [
 const ADD_ONS = [
   {
     title: "Nails Repair",
-    price: "+$5",
+    price: "+$6",
   },
   {
     title: "Removal",
-    price: "+$15",
+    price: "+$16",
   },
   {
     title: "Includes a Soak Off Removal + Nails Strengthening",
@@ -83,22 +129,22 @@ const ADD_ONS = [
   },
 ];
 
-const WAXING_SERVICES = [
+const WAXING = [
   {
     title: "Full face",
     price: "$36",
   },
   {
     title: "Eyebrows",
-    price: "$15",
+    price: "$16",
   },
   {
     title: "Mustache",
-    price: "$10",
+    price: "$11",
   },
   {
     title: "Under Arm",
-    price: "$15",
+    price: "$16",
   },
   {
     title: "Full Arm",
@@ -108,9 +154,6 @@ const WAXING_SERVICES = [
     title: "Half Arm",
     price: "$26",
   },
-];
-
-const MORE_WAXING_SERVICES = [
   {
     title: "Full Leg",
     price: "$61",
@@ -123,6 +166,9 @@ const MORE_WAXING_SERVICES = [
     title: "Bikini",
     price: "$26",
   },
+];
+
+const MORE_WAXING = [
   {
     title: "Brazilian",
     price: "$46",
@@ -138,6 +184,24 @@ const MORE_WAXING_SERVICES = [
   {
     title: "Back",
     price: "$46",
+  },
+];
+const MORE_SERVICES = [
+  {
+    title: "10 Mins Hands/Foot Massage",
+    price: "$16",
+  },
+  {
+    title: "30 Mins Hands/Foot Massage",
+    price: "$46",
+  },
+  {
+    title: "1 Hour Hands/Foot Massage",
+    price: "$71",
+  },
+  {
+    title: "Eyebrow Tinting",
+    price: "$21",
   },
 ];
 
@@ -165,11 +229,11 @@ const ServicesSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Combo Services */}
+          {/* Hands Services */}
           <Card className="p-6 shadow-lg rounded-lg">
-            <h3 className="text-2xl font-bold  mt-4">Combo Services</h3>
+            <h3 className="text-2xl font-bold  mt-4">Hands</h3>
             <ul className="space-y-3 m-0 lg:space-y-5 lg:m-4">
-              {COMBOS.map((combo, index) => (
+              {HANDS.map((combo, index) => (
                 <li key={index} className="flex justify-between">
                   <span>{combo.title}</span>
                   <span className="font-semibold">{combo.price}</span>
@@ -182,11 +246,41 @@ const ServicesSection = () => {
             </ul>
           </Card>
 
-          {/* Extension Services */}
+          {/* Toes Services */}
           <Card className="p-6 shadow-lg rounded-lg">
-            <h3 className="text-2xl font-bold mt-4">Extension Services</h3>
-            <ul className="space-y-3 m-0">
-              {EXTENSION_SERVICES.map((service, index) => (
+            <h3 className="text-2xl font-bold  mt-4">Toes</h3>
+            <ul className="space-y-3 m-0 lg:space-y-5 lg:m-4">
+              {TOES.map((combo, index) => (
+                <li key={index} className="flex justify-between">
+                  <span>{combo.title}</span>
+                  <span className="font-semibold">{combo.price}</span>
+                </li>
+              ))}
+
+              <li className="text-sm text-gray-400">
+                **Note: Additional $5 for Gel Removal
+              </li>
+            </ul>
+          </Card>
+
+          {/* Combo Services */}
+          <Card className="p-6 shadow-lg rounded-lg">
+            <h3 className="text-2xl font-bold  mt-4">Combo</h3>
+            <ul className="space-y-3 m-0 lg:space-y-5 lg:m-4">
+              {COMBOS.map((combo, index) => (
+                <li key={index} className="flex justify-between">
+                  <span>{combo.title}</span>
+                  <span className="font-semibold">{combo.price}</span>
+                </li>
+              ))}
+            </ul>
+          </Card>
+
+          {/* Extension */}
+          <Card className="p-6 shadow-lg rounded-lg">
+            <h3 className="text-2xl font-bold mt-4">Extension</h3>
+            <ul className="space-y-3 m-4">
+              {EXTENSION.map((service, index) => (
                 <li key={index} className="flex justify-between">
                   <span>{service.title}</span>
                   <span className="font-semibold">{service.price}</span>
@@ -201,7 +295,7 @@ const ServicesSection = () => {
           {/* Add-ons */}
           <Card className="p-6 shadow-lg rounded-lg">
             <h3 className="text-2xl font-bold mt-4">Add-ons</h3>
-            <ul className="space-y-3 m-0">
+            <ul className="space-y-3 m-4">
               {ADD_ONS.map((addOn, index) => (
                 <li
                   key={index}
@@ -272,7 +366,7 @@ const ServicesSection = () => {
               </li>
               <li className="flex justify-between ml-4">
                 <span />
-                <span className="font-semibold">
+                <span className="text-sm text-gray-400 italic">
                   plus Special Gift (show ID)
                 </span>
               </li>
@@ -281,9 +375,9 @@ const ServicesSection = () => {
 
           {/* Waxing */}
           <Card className="p-6 shadow-lg rounded-lg">
-            <h3 className="text-2xl font-bold mt-4">Waxing Services</h3>
-            <ul className="space-y-3 m-0">
-              {WAXING_SERVICES.map((service, index) => (
+            <h3 className="text-2xl font-bold mt-4">Waxing</h3>
+            <ul className="space-y-3 m-0 lg:space-y-5 lg:m-4">
+              {WAXING.map((service, index) => (
                 <li key={index} className="flex justify-between">
                   <span>{service.title}</span>
                   <span className="font-semibold">{service.price}</span>
@@ -292,14 +386,22 @@ const ServicesSection = () => {
             </ul>
           </Card>
 
-          {/* More Waxing */}
+          {/* More Services */}
           <Card className="p-6 shadow-lg rounded-lg">
-            <h3 className="text-2xl font-bold mt-4">More Waxing Services</h3>
-            <ul className="space-y-3 m-0">
-              {MORE_WAXING_SERVICES.map((service, index) => (
+            <ul className="space-y-3 m-0 lg:space-y-5 lg:m-4">
+              {MORE_WAXING.map((combo, index) => (
                 <li key={index} className="flex justify-between">
-                  <span>{service.title}</span>
-                  <span className="font-semibold">{service.price}</span>
+                  <span>{combo.title}</span>
+                  <span className="font-semibold">{combo.price}</span>
+                </li>
+              ))}
+            </ul>
+            <h3 className="text-2xl font-bold  mt-4">More Services</h3>
+            <ul className="space-y-3 m-0 lg:space-y-5 lg:m-4">
+              {MORE_SERVICES.map((combo, index) => (
+                <li key={index} className="flex justify-between">
+                  <span>{combo.title}</span>
+                  <span className="font-semibold">{combo.price}</span>
                 </li>
               ))}
             </ul>
