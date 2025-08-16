@@ -6,7 +6,7 @@ export const LINKS = [
   { title: "Services", href: "#services" },
   { title: "Features", href: "#features" },
   { title: "Contact Us", href: "#contact" },
-  { title: "Promotions", href: "#promotions" },
+  // { title: "Promotions", href: "#promotions" },
   { title: "Booking Now", href: FRESHA_LINK },
   // { title: "Booking", href: "#team" },
   // { title: "Testimonials", href: "#testimonials" },

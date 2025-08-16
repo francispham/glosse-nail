@@ -5,6 +5,10 @@ import Image from "next/image";
 
 import { FRESHA_LINK } from "@/lib/constants";
 
+const TITLE = "Grand Opening Offer!";
+const CONTENT = `✨ Celebrate our grand opening in style — enjoy an exclusive 20% OFF on all nail services, our personal thank-you for joining us. Available for a limited time!`;
+const TIME = "🎉 August 1st – 15th, 2025";
+
 export type BooleanStateAction = Dispatch<SetStateAction<boolean>>;
 type PromoModalProps = {
   openModal: boolean;
@@ -13,8 +17,6 @@ type PromoModalProps = {
 
 export default function PromoModal(props: PromoModalProps) {
   const { openModal, setOpenModal } = props;
-
-  useEffect(() => setOpenModal(true), [setOpenModal]);
 
   const handleClose = () => setOpenModal(false);
 
@@ -50,13 +52,11 @@ export default function PromoModal(props: PromoModalProps) {
           width={150}
           height={50}
         />
-        <h2 className="text-3xl mb-4"> Grand Opening Offer!</h2>
+        <h2 className="text-3xl mb-4"> {TITLE}</h2>
         <p className="text-lg mb-6">
-          ✨ Celebrate our grand opening in style — enjoy an exclusive{" "}
-          <b>20% OFF</b> on all nail services, our personal thank-you for
-          joining us. Available for a limited time!
+          {CONTENT}
           <br />
-          <span className="text-[#3391ff]">🎉 August 1st – 15th, 2025</span>
+          <span className="text-[#3391ff]">{TIME}</span>
         </p>
         <div className="pb-5 text-sm text-[#b2b2b2]">
           <Link
