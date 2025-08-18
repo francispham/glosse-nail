@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import { FRESHA_LINK } from "@/lib/constants";
 
-const TITLE = "✨ Labour Day Week Treat! ✨";
+const TITLE = "✨Labour Day Week Treat!✨";
 const TIME = "🎉 August 25th – September 1st, 2025";
 
 export type BooleanStateAction = Dispatch<SetStateAction<boolean>>;
@@ -51,14 +51,14 @@ export default function PromoModal(props: PromoModalProps) {
           width={150}
           height={50}
         />
-        <h2 className="text-3xl mb-4"> {TITLE}</h2>
+        <h2 className="text-2xl mb-4 font-bold"> {TITLE}</h2>
         <p className="text-lg mb-6">
-          🌸 Special for New Guests: Enjoy{" "}
-          <span className="text-[#3391ff]">10% OFF</span> your first visit
+          🌸 Special for New Guests: Enjoying <br />{" "}
+          <span className="text-[#3391ff]">10% OFF</span> on your first visit
           <br />
           🥂 Complimentary snacks, drinks & fresh fruits all week
           <br />
-          Don&apos;t miss this limited-time treat - spot fills up fast!
+          Don&apos;t miss this limited-time treat!
           <br />
           <span className="text-[#3391ff]">{TIME}</span>
         </p>
