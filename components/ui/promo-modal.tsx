@@ -58,7 +58,7 @@ export default function PromoModal(props: PromoModalProps) {
           <br />
           🥂 Complimentary snacks, drinks & fresh fruits all week
           <br />
-          Don't miss this limited-time treat - spot fills up fast!
+          Don&apos;t miss this limited-time treat - spot fills up fast!
           <br />
           <span className="text-[#3391ff]">{TIME}</span>
         </p>
