@@ -54,6 +54,7 @@ export default function RootLayout({
       <head>
         <meta name="apple-mobile-web-app-title" content="Glossé Nails" />
         <link rel="apple-touch-icon" href="/apple-icon.png" type="image/png" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
