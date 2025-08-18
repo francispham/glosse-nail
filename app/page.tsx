@@ -13,7 +13,7 @@ import PromoModal from "@/components/ui/promo-modal";
 // import TestimonialsSection from "@/components/testimonials";
 
 export default function Home() {
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(true);
 
   return (
     <>
