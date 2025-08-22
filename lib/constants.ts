@@ -1,5 +1,5 @@
 export const FRESHA_LINK =
-  "https://www.fresha.com/a/glosse-nails-vancouver-1196-davie-street-g5w9kwai/all-offer?menu=true&pId=2602364&fbclid=IwZXh0bgNhZW0CMTEAAR5pQbmDL2c0CKvE7BfJ8gZH5sh-VUxTpWevhpAJ0iNETswBagLxaEodG-pkbw_aem_ZUWw1cEVrpkQGO9_crqHdg";
+  "https://www.fresha.com/book-now/glosse-nails-ttz8iemh/services?lid=2688793&share=true&pId=2602364";
 
 export const LINKS = [
   { title: "About Glossé Nails", href: "#about" },
