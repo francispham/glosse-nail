@@ -1,5 +1,5 @@
 export const FRESHA_LINK =
-  "https://www.fresha.com/book-now/glosse-nails-ttz8iemh/services?lid=2688793&share=true&pId=2602364";
+  "https://www.fresha.com/book-now/glosse-nails-ttz8iemh/all-offer?share=true&pId=2602364";
 
 export const LINKS = [
   { title: "About Glossé Nails", href: "#about" },
